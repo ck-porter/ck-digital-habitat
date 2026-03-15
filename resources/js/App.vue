@@ -44,9 +44,17 @@ import SupervisorCard from './components/SupervisorCard.vue'
       </SectionCard>
 
       <!-- Footer -->
-      <footer class="text-center text-sm text-amber-700 mt-12">
-        Built with curiosity, caffeine, and a touch of digital magic
-      </footer>
+    <footer class="text-center text-sm text-amber-700 mt-12 space-y-1">
+        <p>Built with curiosity, craftsmanship, and a little AI‑powered momentum</p>
+        <a
+            href="https://github.com/ck-porter/ck-digital-habitat"
+            target="_blank"
+            class="text-amber-800 underline hover:text-amber-600"
+             >
+            View the project on GitHub
+        </a>
+</footer>
+
 
     </div>
   </div>
