@@ -10,7 +10,7 @@ class SkillSeeder extends Seeder
     public function run(): void
     {
         DB::table('skills')->insert([
-           ['name' => 'Communication', 'level' => 5],
+            ['name' => 'Communication', 'level' => 5],
             ['name' => 'Collaboration', 'level' => 5],
             ['name' => 'Ownership', 'level' => 5],
             ['name' => 'Problem Solving', 'level' => 5],
