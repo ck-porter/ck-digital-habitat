@@ -1,22 +1,53 @@
 <script setup lang="ts">
-import SkillListApi from './SkillListApi.vue'
-import SkillListDb from './SkillListDb.vue'
+import SkillListApi from './components/SkillListApi.vue'
+import SkillListDb from './components/SkillListDb.vue'
+import CommentSection from './components/CommentSection.vue'
+import SectionCard from './components/SectionCard.vue'
+import SupervisorCard from './components/SupervisorCard.vue'
 </script>
 
 <template>
-  <div class="p-8 space-y-12">
-    <h1 class="text-3xl font-bold mb-6">CK’s Digital Habitat</h1>
+  <div class="min-h-screen bg-amber-50">
+    <div class="max-w-3xl mx-auto p-8 space-y-12">
 
-    <!-- Hardcoded API Section -->
-    <section class="p-6 bg-white rounded shadow">
-      <h2 class="text-2xl font-bold mb-4">My Skills (Hardcoded API)</h2>
-      <SkillListApi />
-    </section>
+      <!-- Header -->
+      <header class="text-center space-y-2">
+        <h1 class="text-4xl font-extrabold text-amber-700 tracking-tight">
+          CK’s Digital Habitat
+        </h1>
+        <p class="text-amber-900 text-lg">
+          A cozy corner for skills, stories, and inspiration
+        </p>
+      </header>
 
-    <!-- Database API Section -->
-    <section class="p-6 bg-white rounded shadow">
-      <h2 class="text-2xl font-bold mb-4">My Skills (Database API)</h2>
-      <SkillListDb />
-    </section>
+      <!-- Supervisor Card (Ivy) -->
+      <SupervisorCard
+        image="/images/ivy.png"
+        message="Hello Kanguru Digital Agency! Supervisor Ivy has reviewed this project and gives it two paws up."
+      />
+
+      <!-- Hardcoded Skills -->
+      <SectionCard title="My Skills (Hardcoded API)">
+        <SkillListApi />
+      </SectionCard>
+
+      <!-- Database Skills -->
+      <SectionCard title="My Skills (Database API)">
+        <SkillListDb />
+      </SectionCard>
+
+      <!-- Comments -->
+      <SectionCard
+        title="Let’s make 2026 a great year! Feel free to share an inspiring quote, cute story, or funny fact."
+      >
+        <CommentSection />
+      </SectionCard>
+
+      <!-- Footer -->
+      <footer class="text-center text-sm text-amber-700 mt-12">
+        Built with curiosity, caffeine, and a touch of digital magic
+      </footer>
+
+    </div>
   </div>
 </template>
