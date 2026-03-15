@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Skill;
 use Illuminate\Http\Request;
 
 class SkillController extends Controller
 {
-    public function index() {
+    public function hardcoded() {
         return [
             ['name' => 'PHP', 'level' => '5'],
             ['name' => 'Laravel', 'level' => '4'],
@@ -14,5 +15,9 @@ class SkillController extends Controller
             ['name' => 'TypeScript', 'level' => '3'],
             ['name' => 'Dedication', 'level' => '>9000']
         ];
+    }
+
+    public function index() {
+        return Skill::all();
     }
 }
